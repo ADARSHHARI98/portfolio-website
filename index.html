@@ -861,6 +861,41 @@
                 transform: translateY(0);
             }
 
+            /* ── RESUME DOWNLOAD ── */
+            .nav-resume-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.35rem;
+                padding: 0.35rem 1rem;
+                border-radius: 7px;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: var(--accent);
+                border: 1px solid rgba(88, 166, 255, 0.35);
+                background: rgba(88, 166, 255, 0.08);
+                transition:
+                    background 0.2s,
+                    border-color 0.2s;
+                white-space: nowrap;
+            }
+            .nav-resume-btn:hover {
+                background: rgba(88, 166, 255, 0.16);
+                border-color: var(--accent);
+                color: var(--accent);
+            }
+            .btn-download {
+                background: transparent;
+                color: var(--accent2);
+                border: 1px solid rgba(63, 185, 80, 0.4);
+                box-shadow: 0 0 16px rgba(63, 185, 80, 0.1);
+            }
+            .btn-download:hover {
+                background: rgba(63, 185, 80, 0.08);
+                border-color: var(--accent2);
+                box-shadow: 0 0 24px rgba(63, 185, 80, 0.2);
+                color: var(--accent2);
+            }
+
             /* ── BACK TO TOP ── */
             #back-to-top {
                 position: fixed;
@@ -940,6 +975,14 @@
                 <li><a href="#certifications">Certs</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <!-- <a class="nav-resume-btn" href="Adarsh Hari.pdf" download="Adarsh_Hari_Resume.pdf">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Resume
+            </a> -->
             <div class="hamburger" id="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')"><span></span><span></span><span></span></div>
         </nav>
 
@@ -953,10 +996,10 @@
                 <!-- <div class="hero-avatar">AH</div> -->
 
                 <!-- Status -->
-                <div class="hero-status">
+                <!-- <div class="hero-status">
                     <span class="hero-status-dot"></span>
                     Available for opportunities
-                </div>
+                </div> -->
 
                 <!-- Name -->
                 <h1 class="hero-name">
@@ -979,6 +1022,10 @@
                 <!-- CTA Buttons -->
                 <div class="hero-links">
                     <a class="btn btn-primary" href="#contact">Get In Touch</a>
+                    <!-- <a class="btn btn-download" href="Adarsh Hari.pdf" download="Adarsh_Hari_Resume.pdf">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download Resume
+                    </a> -->
                     <a class="btn btn-outline" href="https://github.com/ADARSHHARI98" target="_blank">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path
@@ -1058,7 +1105,7 @@
                             <span class="info-icon">✉️</span><span class="info-label">Email</span
                             ><a href="mailto:adarshhari33@gmail.com" class="info-val">adarshhari33@gmail.com</a>
                         </div>
-                        <div class="info-row"><span class="info-icon">📞</span><span class="info-label">Phone</span><span class="info-val">+91 894360 8829</span></div>
+                        <!-- <div class="info-row"><span class="info-icon">📞</span><span class="info-label">Phone</span><span class="info-val">+91 </span></div> -->
                         <div class="info-row"><span class="info-icon">🎓</span><span class="info-label">Education</span><span class="info-val">MCA – VTU Bangalore</span></div>
                         <div class="info-row">
                             <span class="info-icon">💼</span><span class="info-label">Status</span><span class="info-val" style="color: var(--accent2)">Open to opportunities</span>
@@ -1145,24 +1192,6 @@
                                 </div>
                                 <span class="exp-date active">Jul 2024 – Present</span>
                             </div>
-                            <ul class="exp-bullets">
-                                <li>
-                                    Designed and implemented scalable RESTful APIs using Java and Spring Boot to support multi-client integrations and high-availability
-                                    requirements.
-                                </li>
-                                <li>
-                                    Implemented secure authentication and authorization using Spring Security, JWT, and OAuth2, significantly improving application security and
-                                    access control.
-                                </li>
-                                <li>Developed reusable backend components and shared services, reducing development effort and improving cross-project consistency.</li>
-                                <li>
-                                    Normalized relational database schemas and optimized queries using JPA/Hibernate; integrated Redis caching to improve response time for
-                                    high-frequency data.
-                                </li>
-                                <li>Built CRM modules including email automation, order management, and user/account lifecycle management workflows.</li>
-                                <li>Worked on asynchronous processing using message queues to enhance system scalability and fault tolerance.</li>
-                                <li>Automated structured and dynamic data extraction pipelines using Puppeteer and Cheerio.</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -1176,16 +1205,6 @@
                                 </div>
                                 <span class="exp-date">Jan 2024 – Jun 2024</span>
                             </div>
-                            <ul class="exp-bullets">
-                                <li>
-                                    Contributed to development of Casemap for LexisNexis, building scalable backend services using Java and Spring Boot and integrating with
-                                    React-based frontend systems.
-                                </li>
-                                <li>Practiced Test-Driven Development (TDD) using JUnit and Mockito to maintain high code quality and test coverage.</li>
-                                <li>Designed efficient SQL queries and optimized database interactions for improved performance.</li>
-                                <li>Implemented CI/CD pipelines using Jenkins to automate build, testing, and deployment processes.</li>
-                                <li>Collaborated within Agile teams using Git-based workflows and sprint-based delivery cycles.</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -1199,12 +1218,6 @@
                                 </div>
                                 <span class="exp-date">Jan 2023 – Dec 2023</span>
                             </div>
-                            <ul class="exp-bullets">
-                                <li>Contributed to OCR upgrade initiatives for TextMap Desktop application.</li>
-                                <li>Maintained and enhanced Casemap cloud and desktop applications (Delphi, Spring Boot, Angular).</li>
-                                <li>Updated and managed Visual C++ redistributable packages using InstallShield.</li>
-                                <li>Diagnosed and resolved production bugs, improving application stability and user experience.</li>
-                            </ul>
                         </div>
                     </div>
 
@@ -1218,11 +1231,6 @@
                                 </div>
                                 <span class="exp-date">Dec 2021 – Dec 2022</span>
                             </div>
-                            <ul class="exp-bullets">
-                                <li>Developed and maintained backend services using Java.</li>
-                                <li>Built a full-stack clinic management system using Spring Boot and React.</li>
-                                <li>Applied clean coding principles and version control best practices.</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1315,39 +1323,6 @@
 
         <div class="divider"></div>
 
-        <!-- ACHIEVEMENTS -->
-        <section id="achievements">
-            <div class="container fade-in">
-                <div class="section-label">Achievements</div>
-                <h2 class="section-title">Recognition & participation</h2>
-                <div class="ach-grid">
-                    <div class="ach-item">
-                        <div class="ach-icon">🏆</div>
-                        <div>
-                            <div class="ach-title">Top Idea Contributor Award</div>
-                            <div class="ach-org">RELX Idea Generation Campaign, 2023</div>
-                        </div>
-                    </div>
-                    <div class="ach-item">
-                        <div class="ach-icon">🚀</div>
-                        <div>
-                            <div class="ach-title">Participant – HackFest 2023</div>
-                            <div class="ach-org">Cognizant</div>
-                        </div>
-                    </div>
-                    <div class="ach-item">
-                        <div class="ach-icon">⭐</div>
-                        <div>
-                            <div class="ach-title">Participant – Caliber 2023</div>
-                            <div class="ach-org">Cognizant</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
         <!-- CONTACT -->
         <section id="contact">
             <div class="container fade-in">
@@ -1370,11 +1345,11 @@
                         <div class="contact-card-label">LinkedIn</div>
                         <div class="contact-card-val">adarsh-hari</div>
                     </a>
-                    <a class="contact-card" href="tel:+918943608829">
+                    <!-- <a class="contact-card" href="tel:+91">
                         <div class="contact-card-icon">📞</div>
                         <div class="contact-card-label">Phone</div>
-                        <div class="contact-card-val">+91 894360 8829</div>
-                    </a>
+                        <div class="contact-card-val">+91 </div>
+                    </a> -->
                 </div>
             </div>
         </section>
